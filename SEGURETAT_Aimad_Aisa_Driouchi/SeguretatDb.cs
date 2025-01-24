@@ -152,6 +152,7 @@ namespace SEGURETAT_Aimad_Aisa_Driouchi
             {
                 MessageBox.Show("De momento no hgay ningún rol que permita un usuario inactivo, se cambiará a activo");
             }
+            else {
                 SqlCommand sentencia = new SqlCommand();
             sentencia.Connection = ConnectionSql.connexio;
            
@@ -170,6 +171,7 @@ namespace SEGURETAT_Aimad_Aisa_Driouchi
             ConnectionSql.connexio.Open();
             sentencia.ExecuteNonQuery();
             ConnectionSql.connexio.Close();
+            }
         }
         /*
         public static int selectRol(string nomRol)
